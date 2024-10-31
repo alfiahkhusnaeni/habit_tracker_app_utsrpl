@@ -1,0 +1,10 @@
+habit_tracker_app/
+│
+├── app.py
+├── models.py
+├── static/
+│   ├── scripts/
+│   │   └── app.js
+│   └── styles.css
+└── templates/
+    └── index.html
