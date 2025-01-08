@@ -1,0 +1,9 @@
+' Relasi antar kelas
+User "1" *-- "many" Habit : Owns
+User "1" *-- "many" Habit : Creates
+Habit "1" *-- "many" Progress : Tracks
+Habit "1" *-- "1" Report : Generates
+Habit "1" *-- "many" Notification : Sends
+Admin "1" ..> "many" Report : Analyzes
+Coach "1" ..> "many" Report : Reviews
+Admin "1" *-- "many" User : Manages

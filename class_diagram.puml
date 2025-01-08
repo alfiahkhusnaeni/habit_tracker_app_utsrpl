@@ -1,0 +1,41 @@
+' Diagram Kelas
+class Habit {
+    - id : int
+    - name : String
+    - startDate : Date
+    - frequency : String
+    + createHabit()
+    + editHabit()
+    + deleteHabit()
+}
+
+class Progress {
+    - id : int
+    - habitId : int
+    - date : Date
+    - status : Boolean
+    + updateProgress()
+    + getProgress()
+}
+
+class Report {
+    - id : int
+    - habitId : int
+    - completionRate : Float
+    + generateReport()
+}
+
+class User {
+    - id : int
+    - name : String
+    - email : String
+    + register()
+    + login()
+}
+
+class Notification {
+    - id : int
+    - habitId : int
+    - message : String
+    + sendReminder()
+}

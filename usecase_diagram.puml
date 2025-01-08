@@ -1,0 +1,18 @@
+' Diagram Use Case
+rectangle "Habit Tracker App" {
+    usecase "Create Habit" as UC_Create
+    usecase "Edit Habit" as UC_Edit
+    usecase "Update Progress" as UC_Update
+    usecase "Delete Habit" as UC_Delete
+    usecase "View Reports" as UC_ViewReport
+}
+
+' Relasi aktor dengan use case
+User --> UC_Create : Add habit
+User --> UC_Edit : Modify habit
+User --> UC_Update : Track progress
+User --> UC_Delete : Remove habit
+User --> UC_ViewReport : View performance
+
+Admin --> UC_ViewReport : Analyze reports
+Coach --> UC_ViewReport : Provide feedback

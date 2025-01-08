@@ -1,0 +1,28 @@
+@startuml
+' Definisi fungsi CRUD dan lainnya
+
+class Habit {
+    + createHabit(name: String, startDate: Date, frequency: String) : void
+    + editHabit(id: int, name: String, frequency: String) : void
+    + deleteHabit(id: int) : void
+    + getHabit(id: int) : Habit
+    + listHabits(userId: int) : List<Habit>
+}
+
+class Progress {
+    + logProgress(habitId: int, date: Date, status: Boolean) : void
+    + updateProgress(habitId: int, date: Date, status: Boolean) : void
+    + getProgress(habitId: int, date: Date) : Progress
+    + listProgress(habitId: int) : List<Progress>
+}
+
+class Report {
+    + generateReport(habitId: int, startDate: Date, endDate: Date) : Report
+    + getCompletionRate(habitId: int) : float
+}
+
+' Relasi antar kelas
+Habit "1" *-- "many" Progress : Tracks
+Habit "1" *-- "1" Report : Generates
+
+@enduml

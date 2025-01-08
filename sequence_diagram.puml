@@ -1,0 +1,14 @@
+' Diagram Urutan untuk alur CRUD
+actor User
+participant Habit
+participant Progress
+participant Report
+participant Notification
+
+User -> Habit : createHabit(name, startDate, frequency)
+Habit --> Progress : Initialize tracking
+User -> Habit : editHabit(id, name, frequency)
+User -> Progress : updateProgress(habitId, date, status)
+Admin -> Habit : deleteHabit(id)
+Habit -> Notification : Remove reminders
+User -> Report : generateReport(habitId)

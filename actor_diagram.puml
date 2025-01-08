@@ -1,0 +1,4 @@
+' Diagram Aktor untuk Habit Tracker
+actor "User" as User
+actor "Admin" as Admin
+actor "Coach" as Coach
